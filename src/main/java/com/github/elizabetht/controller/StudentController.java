@@ -43,6 +43,7 @@ public class StudentController {
 			model.addAttribute("message", "User Name exists. Try another user name");
 			return "signup";
 		} else {
+			student.setActive(1);
 			studentService.save(student);
 			model.addAttribute("message", "Saved student details");
 			return "redirect:login.html";
