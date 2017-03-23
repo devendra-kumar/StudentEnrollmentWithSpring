@@ -32,6 +32,7 @@ body {
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="signup.html">Signup</a></li>
 				<li><a href="login.html">Login</a></li>
+				<li><a href="studentDetail.html">Student Detail</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -51,8 +52,8 @@ body {
 					us. Or login to access your details, if you are already enrolled.</p>
 			</div>
 
-			<a class="btn btn-primary" href="signup.html">Signup » </a> <a
-				class="btn btn-primary" href="login.html">Login » </a>
+			<a class="btn btn-primary" href="signup.html">Signup Â» </a> <a
+				class="btn btn-primary" href="login.html">Login Â» </a>
 		</div>
 
 		<div></div>
