@@ -1,51 +1,11 @@
 package com.github.elizabetht.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.github.elizabetht.model.Student;
-import com.github.elizabetht.repository.StudentRepository;
 import java.util.List;
 
-@Service("studentService")
-public class StudentServiceImpl implements StudentService {
+import com.github.elizabetht.model.Student;
 
-	@Autowired
-	private StudentRepository studentRepository;
-
-	@Transactional
-	public Student save(Student student) {
-		return studentRepository.save(student);
-	}
-
-	public boolean findByLogin(String userName, String password) {
-		Student stud = studentRepository.findByUserName(userName);
-
-		if (stud != null && stud.getPassword().equals(password)) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public boolean findByUserName(String userName) {
-		Student stud = studentRepository.findByUserName(userName);
-
-		if (stud != null) {
-			return true;
-		}
-
-		return false;
-	}
-
-	public List<Student> getAllActiveStudent() {
-		return studentRepository.getAllActiveStudent();
-	}
-
-	public Student getStudentByID(long id) {
-		return studentRepository.getStudentByID(id);
-
-	}
-
+public interface StudentService extends BaseService<Student> {
+	
+	public List<Student> getAllStudent();
+	public Student getStudentByID(long id);
 }
