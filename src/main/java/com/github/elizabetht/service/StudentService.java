@@ -6,6 +6,6 @@ import com.github.elizabetht.model.Student;
 
 public interface StudentService extends BaseService<Student> {
 	
-	public List<Student> getAllStudent();
+	public List<Student> getAllActiveStudent();
 	public Student getStudentByID(long id);
 }
