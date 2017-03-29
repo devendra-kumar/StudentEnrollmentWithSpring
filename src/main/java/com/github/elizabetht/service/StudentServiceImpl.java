@@ -1,5 +1,7 @@
 package com.github.elizabetht.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +38,12 @@ public class StudentServiceImpl implements StudentService {
 		}
 		
 		return false;
+	}
+	public List<Student> getAllActiveStudent(){
+		return studentRepository.getAllActiveStudent();
+	}
+	public Student getStudentByID(long id){
+		return studentRepository.getStudentByID(id);
 	}
 
 }
